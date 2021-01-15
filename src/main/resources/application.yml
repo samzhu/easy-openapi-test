@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #表示 hibernate 會用 Entity 來自動產生出對應的資料表格
+    show-sql: true
