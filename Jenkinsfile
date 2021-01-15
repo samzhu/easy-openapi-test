@@ -1,7 +1,18 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'docker'
+    }
+
+  }
   stages {
     stage('compile') {
+      agent {
+        docker {
+          image 'docker'
+        }
+
+      }
       steps {
         sh 'ls'
         sh 'docker ps'
