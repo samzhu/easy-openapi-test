@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'docker'
+      image '3.6.3-jdk-11-slim'
     }
 
   }
