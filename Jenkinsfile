@@ -16,10 +16,10 @@ pipeline {
       }
       steps {
         sh 'ls'
-        sh './mvnw clean package'
         sh '''./mvnw spring-boot:build-image \\
   -Dspring-boot.build-image.imageName=easy-openapi-test \\
   -Dspring-boot.build-image.builder=gcr.io/buildpacks/builder'''
+        sh './mvnw clean package'
       }
     }
 
