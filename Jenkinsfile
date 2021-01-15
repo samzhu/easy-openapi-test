@@ -19,6 +19,7 @@ pipeline {
   -Dspring-boot.build-image.imageName=easy-openapi-test \\
   -Dspring-boot.build-image.builder=gcr.io/buildpacks/builder'''
         sh './mvnw clean package'
+        archiveArtifacts 'target/*.jar'
       }
     }
 
